@@ -238,8 +238,8 @@ def on_search_to_currency(*args):
 root = tk.Tk()
 root.title("Currency Converter")
 
-root.geometry("600x500")  # Increased window size to accommodate search functionality
-root.minsize(400, 300)  # Set minimum size to prevent excessive shrinking
+root.geometry("600x500")
+root.minsize(400, 300)
 
 background_color = "#f4f4f9"
 label_font = ("Arial", 12)
@@ -288,7 +288,6 @@ convert_button.grid(row=5, column=0, columnspan=2, pady=10)
 result_label = tk.Label(frame, text="", font=result_font, bg=background_color)
 result_label.grid(row=6, column=0, columnspan=2, pady=10)
 
-# Fetch all currency names for searching
 _, currencies = get_exchange_rates("USD")
 all_currency_names = sorted([currency_names.get(code, code) for code in currencies])
 
